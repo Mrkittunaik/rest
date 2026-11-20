@@ -107,6 +107,17 @@ footer a:hover{color:#fff}.soc{display:flex;gap:14px}.soc a{display:inline-flex}
 .cd .btn{margin-top:auto;align-self:flex-start;padding:11px 22px;min-height:44px}
 dialog{border:1px solid var(--tx);padding:0;max-width:520px;width:calc(100% - 32px);max-height:90vh;overflow:auto;color:var(--tx);background:#fff;margin:auto}dialog::backdrop{background:rgba(0,0,0,.65)}
 #dimg{aspect-ratio:16/9}#dl{padding-left:18px;font-size:.88rem;display:grid;gap:4px}.act{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.it{text-align:left}.mbar{display:none}
+@media(max-width:860px){.burger{margin-left:auto}.about .ph{aspect-ratio:16/10}.map{aspect-ratio:16/8}
+.mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;inset:auto 0 0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px))}
+.mbar .btn{justify-content:center;padding:12px 10px;min-height:46px}.mbar .btn+.btn{background:var(--tx);color:#fff}body{padding-bottom:68px}}
+@media(max-width:560px){
+.cards,.trio{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-inline:-16px;padding:4px 16px 12px;width:calc(100% + 32px)!important;scrollbar-width:none}
+.cards::-webkit-scrollbar,.trio::-webkit-scrollbar{display:none}
+.cards>.cd{flex:0 0 78%;scroll-snap-align:start}.trio>.ph{flex:0 0 72%;aspect-ratio:4/5;scroll-snap-align:start}
+.info4{grid-template-columns:1fr 1fr;gap:18px 12px}.i4{gap:8px}.i4 p{font-size:.82rem}
+.dk{padding:56px 20px}.hero{min-height:440px}h1{font-size:2.4rem}.sec{padding:36px 16px}.tabs{gap:6px;margin:24px 0}.tab{padding:10px 14px}}
+@media(min-width:861px){html{zoom:.9}}
 </style>
 </head>
 <body>
@@ -204,6 +215,7 @@ dialog{border:1px solid var(--tx);padding:0;max-width:520px;width:calc(100% - 32
 <div><h3>Follow</h3><div class="soc"><a href="#home" aria-label="Instagram"><svg class="i"><use href="#ig"/></svg></a><a href="#home" aria-label="Facebook"><svg class="i"><use href="#fb"/></svg></a><a href="#home" aria-label="Twitter"><svg class="i"><use href="#tw"/></svg></a></div></div></div>
 <div class="copy">© 2026 Maison Noir. All rights reserved.</div></footer>
 
+<div class="mbar"><a class="btn" href="tel:+910000000000"><svg class="i"><use href="#phone"/></svg>Call</a><a class="btn" href="#reserve"><svg class="i"><use href="#cal"/></svg>Reserve</a></div>
 <dialog id="dlg" aria-labelledby="dt"><div class="ph" id="dimg"><div class="bg"></div></div><div class="bd"><h3 id="dt"></h3><span class="pr" id="dp"></span><p id="dd"></p><ul id="dl"></ul><div class="act"><a class="btn" id="dc" href="#reserve"></a><button class="btn" type="button" id="dx">Close</button></div></div></dialog>
 <script>
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
